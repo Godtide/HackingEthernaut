@@ -1,6 +1,10 @@
 //await web3.eth.getStorageAt(address, position)
-const password = await web3.eth.getStorageAt(instanceof, 1);
-await contract.unlock(password);
+const password = await web3.eth.getStorageAt(contract.address, 1);
+//web3.utils.hexToAscii(string)
+ console.log( web3.utils.hexToAscii(password));
+ //web3.utils.hexToBytes(string)
+const passWord = web3.utils.hexToBytes(password)
+await contract.unlock(passWord);
 
 
 
