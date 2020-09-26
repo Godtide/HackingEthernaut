@@ -8,7 +8,7 @@ pragma solidity ^0.4.24;
   // Interface can also be used instead of importing the whole contract, as Interface does not store state variables on the EVM, and at such
   // reduce the size of the calling contract, and gas required for deployment of the calling contract
 
-contract attackGatekeeperTwo {
+contract AttackGatekeeperTwo {
 
     /**the victim's gates are exploitable:
     gate1 = requires that the victim is called from a contract
