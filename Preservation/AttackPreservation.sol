@@ -8,7 +8,7 @@ It also preserves the index of storedTime in the calling contract and using this
  index 0 is the address of timeZone1Library. Thus setTime() to replace timeZone1Library with a malicious contract. 
  In this malicious contract, setTime() then modifies index 2 which on the calling contract is the owner variable!
 
-1)Deploy the malicious library contract
+1)Deploy the AttackPreservation contract
 2) Call SetFirstTime() with deployed malicous contract
 Now that the address of timeZone1Library has been modified to the malicious contract,
 3)call setFirstTime() with the uint value of your player address.
@@ -16,7 +16,7 @@ Now that the address of timeZone1Library has been modified to the malicious cont
 
 pragma solidity ^0.5.0;
 
-contract LibraryContract {
+contract AttackPreservation {
 
   // stores a timestamp 
   address index0;
